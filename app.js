@@ -34,10 +34,10 @@ document.getElementById('deposit-btn').addEventListener('click',function(){
     
 });
 
-function updateBalance(boxId){
+function updateBalance(boxId,fieldId){
     const avaiableBalance = document.getElementById('balance-field');
-    const btcField = document.getElementById('btc-field');
-    const ethField = document.getElementById('eth-field');
+    const btcField = document.getElementById(fieldId);
+    const ethField = document.getElementById(fieldId);
     const availableAmount = parseFloat(avaiableBalance.innerText);
     const coinAmount = getInputValue(boxId);
     if(coinAmount > 0){
